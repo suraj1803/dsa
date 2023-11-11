@@ -22,4 +22,26 @@ public class MathQ {
 
         return n == reverseNum;
     }
+
+    public int factorial(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public int trailingZeroesInFactorial(int n) {
+        int result = 0;
+        for (int i = 5; i <= n; i *= 5) {
+            result += n / i;
+        }
+        return result;
+    }
+
+    public int gcd(int a, int b) {
+        if (b == 0)
+            return a;
+        return gcd(b, a % b);
+    }
 }
