@@ -59,6 +59,7 @@ public class MathQ {
                 System.out.println(i);
                 if (i != n / i)
                     System.out.println(n / i);
+
             }
         }
     }
