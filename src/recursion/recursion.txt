@@ -1,0 +1,16 @@
+Indirect recursion
+   public static void fun1() {
+       fun2();
+   }
+
+   public static void fun2() {
+       fun1();
+   }
+
+Direct recursion
+    public static void fun3(int n) {
+        if (n == 0)
+            return;
+        System.out.println("GFG");
+        fun3(n - 1);
+    }
