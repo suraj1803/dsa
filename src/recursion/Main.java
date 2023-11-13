@@ -2,7 +2,8 @@ package recursion;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(fun2(16));
+//        System.out.println(fun2(16));
+        binaryToDecimal(7);
     }
 
     public static void fun(int n) {
@@ -26,6 +27,13 @@ public class Main {
             return 0;
         else
             return 1 + fun2(n / 2);
+    }
+
+    public static void binaryToDecimal(int n) {
+        if (n == 0)
+            return;
+        binaryToDecimal(n / 2);
+        System.out.print(n % 2);
     }
 
 }
