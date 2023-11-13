@@ -75,4 +75,24 @@ public class MathQ {
                 System.out.println(n / i);
         }
     }
+
+    // main idea of sieve algorithm is to mark all the composite numbers as false
+    public void sieve(int n) {
+        boolean[] primes = new boolean[n + 1];
+        for (int i = 0; i <= n; i++)
+            primes[i] = true;
+
+        for (int i = 2; i * i <= n; i++) {
+            if (primes[i]) {
+                for (int j = i * 2; j <= n; j += i) {
+                    primes[j] = false;
+                }
+            }
+        }
+
+        for (int i = 2; i <= n; i++) {
+            if (primes[i])
+                System.out.println(i);
+        }
+    }
 }
