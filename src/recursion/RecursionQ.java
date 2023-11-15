@@ -40,11 +40,9 @@ public class RecursionQ {
         return n + naturalSum(n - 1);
     }
 
-    public boolean isPalindromeString(String str) {
-        if (str.length() <= 1)
+    public boolean isPalindromeString(String str, int start, int end) {
+        if (start >= end)
             return true;
-        boolean isEndCharEqual = (str.charAt(0) == str.charAt(str.length() - 1));
-        boolean isSubStringPalindrome = isPalindromeString(str.substring(1, str.length() - 1));
-        return isEndCharEqual && isSubStringPalindrome;
+        return (str.charAt(start) == str.charAt(end)) && (isPalindromeString(str, start + 1, end - 1));
     }
 }

@@ -5,7 +5,7 @@ public class Main {
         RecursionQ recursionQ = new RecursionQ();
 //        System.out.println(recursionQ.factorial(5));
 //        System.out.println(recursionQ.isPalindromeString("abas"));
-        String str = "abcbba";
-        System.out.println(recursionQ.isPalindromeString(str));
+        String str = "abbcbba";
+        System.out.println(recursionQ.isPalindromeString(str, 0, str.length() - 1));
     }
 }
