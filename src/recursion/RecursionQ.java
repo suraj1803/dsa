@@ -39,4 +39,12 @@ public class RecursionQ {
             return 0;
         return n + naturalSum(n - 1);
     }
+
+    public boolean isPalindromeString(String str) {
+        if (str.length() <= 1)
+            return true;
+        boolean isEndCharEqual = (str.charAt(0) == str.charAt(str.length() - 1));
+        boolean isSubStringPalindrome = isPalindromeString(str.substring(1, str.length() - 1));
+        return isEndCharEqual && isSubStringPalindrome;
+    }
 }
