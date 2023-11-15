@@ -95,4 +95,18 @@ public class MathQ {
                 System.out.println(i);
         }
     }
+
+    // time complexity log(b)
+    public int power(int a, int b) {
+        if (b == 0)
+            return 1;
+
+        int temp = power(a, b / 2);
+
+        temp = temp * temp;
+
+        if (b % 2 == 0)
+            return temp;
+        return temp * a;
+    }
 }
