@@ -45,4 +45,10 @@ public class RecursionQ {
             return true;
         return (str.charAt(start) == str.charAt(end)) && (isPalindromeString(str, start + 1, end - 1));
     }
+
+    public int sumOfDigits(int n) {
+        if (n == 0)
+            return 0;
+        return n % 10 + sumOfDigits(n / 10);
+    }
 }
