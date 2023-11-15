@@ -21,4 +21,22 @@ public class RecursionQ {
         binaryToDecimal(n / 2);
         System.out.print(n % 2);
     }
+
+    public int factorial(int n) {
+        if (n == 0)
+            return 1;
+        return n * factorial(n - 1);
+    }
+
+    public int fib(int n) {
+        if (n <= 1)
+            return n;
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    public int naturalSum(int n) {
+        if (n == 0)
+            return 0;
+        return n + naturalSum(n - 1);
+    }
 }
