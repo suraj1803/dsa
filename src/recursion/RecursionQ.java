@@ -51,4 +51,20 @@ public class RecursionQ {
             return 0;
         return n % 10 + sumOfDigits(n / 10);
     }
+
+    public int maxPieces(int n, int a, int b, int c) {
+        if (n == 0)
+            return 0;
+        if (n < 0)
+            return -1;
+        int res = max(maxPieces(n - a, a, b, c), maxPieces(n - b, a, b, c), maxPieces(n - c, a, b, c));
+        if (res == -1)
+            return res;
+        return res + 1;
+    }
+
+    public int max(int a, int b, int c) {
+        return Math.max(Math.max(a, b), c);
+    }
+
 }
