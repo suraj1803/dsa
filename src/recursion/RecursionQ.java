@@ -67,4 +67,14 @@ public class RecursionQ {
         return Math.max(Math.max(a, b), c);
     }
 
+    public void subSets(String str, String curr, int i) {
+        if (i == str.length()) {
+            System.out.println(curr);
+            return ;
+        }
+        subSets(str, curr, i + 1);
+        subSets(str, curr + str.charAt(i), i + 1);
+
+    }
+
 }
