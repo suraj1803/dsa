@@ -74,7 +74,16 @@ public class RecursionQ {
         }
         subSets(str, curr, i + 1);
         subSets(str, curr + str.charAt(i), i + 1);
-
     }
 
+    public void towerOfHanoi(int n, char A, char B, char C) {
+        if (n == 1) {
+            System.out.println("Move 1 " + " disc " + " from " + A + " to " + C);
+            return;
+        }
+
+        towerOfHanoi(n - 1, A , C, B);
+        System.out.println("Move " + n + " disc " + " from " + A + " to " + C);
+        towerOfHanoi(n - 1, B, A, C);
+    }
 }
