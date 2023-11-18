@@ -56,9 +56,18 @@ public class RecursionQ {
     }
 
     public int power(int p, int q) {
+//        if (q == 0)
+//            return 1;
+//        return p * power(p , q - 1);
         if (q == 0)
             return 1;
-        return p * power(p , q - 1);
+        if (q == 1)
+            return p;
+        int temp = power(p, q / 2);
+        temp = temp * temp;
+        if (q % 2 == 0)
+            return temp;
+        return temp * p;
     }
 
     public int maxPieces(int n, int a, int b, int c) {
