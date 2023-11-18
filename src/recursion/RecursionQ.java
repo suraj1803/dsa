@@ -46,10 +46,19 @@ public class RecursionQ {
         return (str.charAt(start) == str.charAt(end)) && (isPalindromeString(str, start + 1, end - 1));
     }
 
+    // time complexity = O(d)
+    // space complexity = O(d)
+    // where d = no of digits
     public int sumOfDigits(int n) {
-        if (n == 0)
-            return 0;
+        if (n >= 0 && n <= 9)
+            return n;
         return n % 10 + sumOfDigits(n / 10);
+    }
+
+    public int power(int p, int q) {
+        if (q == 1)
+            return p;
+        return p * power(p , q - 1);
     }
 
     public int maxPieces(int n, int a, int b, int c) {
@@ -86,4 +95,5 @@ public class RecursionQ {
         System.out.println("Move " + n + " disc " + " from " + A + " to " + C);
         towerOfHanoi(n - 1, B, A, C);
     }
+
 }
