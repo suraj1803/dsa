@@ -70,6 +70,23 @@ public class RecursionQ {
         return temp * p;
     }
 
+    public void printPattern(int n, int m, boolean flag) {
+        if (n == m && flag) {
+            System.out.println(m);
+            return;
+        }
+
+        System.out.println(m);
+        if (m <= 0)
+            flag = true;
+
+        if (flag) {
+            printPattern(n, m + 5, flag);
+        }
+        else
+            printPattern(n, m - 5, flag);
+    }
+
     public int maxPieces(int n, int a, int b, int c) {
         if (n == 0)
             return 0;
