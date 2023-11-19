@@ -70,6 +70,11 @@ public class RecursionQ {
         return temp * p;
     }
 
+    // print pattern -
+    // n = 16
+    // 16 11 6 1 -4 1 6 11 16
+    // n = 10
+    // 10 5 0 5 10
     public void printPattern(int n, int m, boolean flag) {
         if (n == m && flag) {
             System.out.println(m);
@@ -85,6 +90,12 @@ public class RecursionQ {
         }
         else
             printPattern(n, m - 5, flag);
+    }
+
+    public int mthSum(int n, int m) {
+        if (m == 1)
+            return n * (n + 1) / 2;
+        return mthSum(mthSum(n, m - 1), 1);
     }
 
     public int maxPieces(int n, int a, int b, int c) {

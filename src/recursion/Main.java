@@ -10,6 +10,7 @@ public class Main {
         RecursionOnStrings s = new RecursionOnStrings();
 //        System.out.println(s.removeOccurrences("abbbbcacccaaaa", 'a', 0));
 //        System.out.println(s.isPalindrome("abcbab", 0, "abcbab".length() - 1));
-        recursionQ.printPattern(16, 16, false);
+//        recursionQ.printPattern(16, 16, false);
+        System.out.println(recursionQ.mthSum(3, 1));
     }
 }
