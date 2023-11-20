@@ -1,8 +1,4 @@
-import mathemaics.MathQ;
 import patterns.PatternQ;
-
-import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
