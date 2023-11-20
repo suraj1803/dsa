@@ -25,12 +25,12 @@ public class PatternQ {
 
     public void hollowRectangle(int r, int c) {
         for (int i = 1; i <= r; i++) {
-           for (int j = 1; j <= c; j++) {
-               if (i == 1 || i == r || j == 1 || j == c)
-                   System.out.print(" * ");
-               else
-                   System.out.print("   ");
-           }
+            for (int j = 1; j <= c; j++) {
+                if (i == 1 || i == r || j == 1 || j == c)
+                    System.out.print(" * ");
+                else
+                    System.out.print("   ");
+            }
             System.out.println();
         }
     }
@@ -43,7 +43,7 @@ public class PatternQ {
             }
 
             //printing stars
-            for (int  j = 1; j <= i; j++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -62,7 +62,7 @@ public class PatternQ {
     public void floydTriangle(int n) {
         int num = 1;
         for (int i = 1; i <= n; i++) {
-            for (int  j = 1; j <= i; j++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(num++ + " ");
             }
             System.out.println();
@@ -70,33 +70,48 @@ public class PatternQ {
     }
 
     public void zeroOneTriangle(int n) {
-//        for (int i = 1; i <= n; i++) {
-//            if (i % 2 != 0) {
-//                for (int  j = 1; j <= i; j++) {
-//                    if (j % 2 != 0)
-//                        System.out.print(1);
-//                    else
-//                        System.out.print(0);
-//                }
-//            }
-//            else {
-//                for (int j = 1; j <= i; j++) {
-//                    if (j % 2 == 0) {
-//                        System.out.print(1);
-//                    }
-//                    else
-//                        System.out.print(0);
-//                }
-//            }
-//            System.out.println();
-//        }
-
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 if ((i % 2 != 0 && j % 2 != 0) || (i % 2 == 0 && j % 2 == 0))
                     System.out.print(1);
                 else
                     System.out.print(0);
+            }
+            System.out.println();
+        }
+    }
+
+    public void butterfly(int n) {
+        for (int i = 1; i <= n; i++) {
+            // print stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" * ");
+            }
+
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print("   ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" * ");
+            }
+            System.out.println();
+        }
+
+        for (int i = 1; i <= n; i++) {
+            // stars
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(" * ");
+            }
+
+            // spaces
+            for (int k = 1; k <= 2 * (i - 1); k++) {
+                System.out.print("   ");
+            }
+
+            // stars
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(" * ");
             }
             System.out.println();
         }
