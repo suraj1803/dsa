@@ -7,6 +7,7 @@ public class Main {
 //        q.hollowRectangle(3, 4);
 //        q.invertedAndRotatedHalfPyramid(4);
 //        q.invertedHalfPyramid(5);
-        q.floydTriangle(5);
+//        q.floydTriangle(5);
+        q.zeroOneTriangle(5);
     }
 }
