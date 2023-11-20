@@ -5,6 +5,8 @@ public class Main {
         PatternQ q = new PatternQ();
 //        q.butterfly(10);
 //        q.hollowRhombus(5);
-        q.diamond(4);
+//        q.diamond(4);
+//        q.numberPyramid(3);
+        q.palindromicNumber(5);
     }
 }

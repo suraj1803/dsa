@@ -169,4 +169,54 @@ public class PatternQ {
             System.out.println();
         }
     }
+
+    public void numberPyramid(int n) {
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // numbers
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k % 2 == 0)
+                    System.out.print(" ");
+                else
+                    System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+
+    public void palindromicNumber(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // descending
+            for (int j = i ; j >= 1; j--) {
+                System.out.print(j);
+            }
+
+            // ascending
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j);
+            }
+
+//            int count = i;
+//            boolean flag = false;
+//            for (int k = 1; k <= 2 * i - 1; k++) {
+//                System.out.print(count);
+//                if (count == 1)
+//                    flag = true;
+//                if (flag)
+//                    count++;
+//                else
+//                    count--;
+//            }
+
+            System.out.println();
+        }
+    }
 }
