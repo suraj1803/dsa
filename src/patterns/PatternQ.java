@@ -204,18 +204,6 @@ public class PatternQ {
                 System.out.print(j);
             }
 
-//            int count = i;
-//            boolean flag = false;
-//            for (int k = 1; k <= 2 * i - 1; k++) {
-//                System.out.print(count);
-//                if (count == 1)
-//                    flag = true;
-//                if (flag)
-//                    count++;
-//                else
-//                    count--;
-//            }
-
             System.out.println();
         }
     }

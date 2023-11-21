@@ -113,6 +113,20 @@ public class RecursionQ {
         return Math.max(Math.max(a, b), c);
     }
 
+
+    public int multiplication(int a, int b) {
+        if (b == 1)
+            return a;
+        return a + multiplication(a, b - 1);
+    }
+
+    public void decimalToBinary(int n) {
+        if (n == 0)
+            return;
+        decimalToBinary(n / 2);
+        System.out.print(n % 2);
+    }
+
     public void subSets(String str, String curr, int i) {
         if (i == str.length()) {
             System.out.println(curr);
