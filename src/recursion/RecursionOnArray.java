@@ -37,4 +37,21 @@ public class RecursionOnArray {
             return Math.abs(arr[i] - arr[i + 1]);
         return Math.min( (Math.abs(arr[i] - arr[i + 1])) + frog(arr, i +1) , (Math.abs(arr[i] - arr[i + 1])) + frog(arr, i + 2));
     }
+
+    public void printSubArrays(int[] arr, int[] curr, int i) {
+        if (i == arr.length) {
+            for (int k = 0; k < curr.length; k++)
+                System.out.print(curr[k] + " ");
+            System.out.println();
+            return;
+        }
+
+        printSubArrays(arr, curr, i + 1);
+
+        int[] newOutput = new int[curr.length + 1];
+        for (int k = 0; k < curr.length; k++)
+            newOutput[k] = curr[k];
+        newOutput[curr.length] = arr[i];
+        printSubArrays(arr, newOutput, i + 1);
+    }
 }

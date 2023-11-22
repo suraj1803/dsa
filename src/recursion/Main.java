@@ -8,5 +8,6 @@ public class Main {
 //        recursionQ.decimalToBinary(5);
         RecursionOnArray a = new RecursionOnArray();
 //        System.out.println(a.isPresent(new int[]{4, 12, 55, 22, 89}, 89, 0));
+        a.printSubArrays(new int[]{1, 2, 3}, new int[0], 0);
     }
 }
