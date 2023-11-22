@@ -1,5 +1,7 @@
 package recursion;
 
+import java.util.ArrayList;
+
 public class RecursionOnArray {
     public void print(int[] arr, int index) {
        if (index == arr.length)
@@ -18,6 +20,14 @@ public class RecursionOnArray {
         if (index == arr.length - 1)
             return arr[index];
         return arr[index] + sum(arr, index + 1);
+    }
+
+    public boolean isPresent(int[] arr, int x, int i) {
+        if (i == arr.length)
+            return false;
+        if (arr[i] == x)
+            return true;
+        return isPresent(arr, x, i + 1);
     }
 
     public int frog(int[] arr, int i) {
