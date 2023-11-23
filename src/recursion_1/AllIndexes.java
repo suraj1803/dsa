@@ -35,6 +35,7 @@ public class AllIndexes {
             int[] output = new int[0];
             return output;
         }
+
         int[] smallOutput = allIndexes(arr, x, i + 1);
         if (arr[i] == x) {
             int[] newOutput = new int[smallOutput.length + 1];
