@@ -24,4 +24,17 @@ Sample Output :
 package recursion_1;
 
 public class LastIndex {
+    public static void main(String[] args) {
+        System.out.println(lastIndex(new int[]{1, 5, 3, 2, 3, 5}, 5, 0));
+    }
+
+    public static int lastIndex(int[] arr, int x, int i) {
+        if (i == arr.length)
+            return -1;
+
+        int res = lastIndex(arr, x, i + 1);
+        if (arr[i] == x && res == -1)
+            return i;
+        return res;
+    }
 }

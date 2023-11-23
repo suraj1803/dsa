@@ -1,8 +1,6 @@
 package recursion_1;
 
-import java.util.Scanner;
-
-public class Main {
+public class PMI {
     public static void main(String[] args) {
 
     }
