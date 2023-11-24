@@ -47,4 +47,5 @@ public class AllIndexes {
         }
         return smallOutput;
     }
+
 }
