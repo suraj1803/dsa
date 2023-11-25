@@ -40,21 +40,18 @@ import java.util.Arrays;
 
 public class ArrangeNumbers {
     public static void main(String[] args) {
-        int[] arr = arrange(5);
+        int[] arr = arrange(6);
         System.out.println(Arrays.toString(arr));
     }
 
     public static int[] arrange(int n) {
         int[] arr = new int[n];
         int i;
-        for (i = 0; 2 * i + 1 <= n; i++) {
+        for (i = 0; i <= (n - 1) / 2; i++) {
             arr[i] = 2 * i + 1;
         }
 
-        if (n % 2 == 0)
-            arr[i++] = n;
-
-        int k = (n % 2 == 0) ? n - 2 : n - 1;
+        int k = (n % 2 == 0) ? n : n - 1;
 
         for (int j = i; j < n; j++) {
             arr[j] = k;
