@@ -127,15 +127,6 @@ public class RecursionQ {
         System.out.print(n % 2);
     }
 
-    public void subSets(String str, String curr, int i) {
-        if (i == str.length()) {
-            System.out.println(curr);
-            return ;
-        }
-        subSets(str, curr, i + 1);
-        subSets(str, curr + str.charAt(i), i + 1);
-    }
-
     public void towerOfHanoi(int n, char A, char B, char C) {
         if (n == 1) {
             System.out.println("Move 1 " + " disc " + " from " + A + " to " + C);
