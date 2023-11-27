@@ -1,6 +1,9 @@
 package arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
@@ -13,12 +16,13 @@ public class RemoveDuplicates {
     public static int removeDuplicates(int[] arr) {
         // idea is to keep track of distinct elements
         // and ignoring same elements
-        int res = 0;
+        int distinctIndex = 1;
         for(int i = 1; i < arr.length; i++) {
-            if (arr[i] != arr[res]) {
-                arr[++res] = arr[i];
+            if (arr[i] != arr[distinctIndex - 1]) {
+                arr[distinctIndex] = arr[i];
+                distinctIndex++;
             }
         }
-        return res;
+        return distinctIndex;
     }
 }
