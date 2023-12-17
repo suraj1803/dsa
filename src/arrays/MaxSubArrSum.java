@@ -4,7 +4,6 @@ public class MaxSubArrSum {
     public static void main(String[] args) {
         int[] arr = {2, 3, -8, 7, -1, 2, 3};
         System.out.println(maxSumOpt(arr));
-        // sub arrays will be - {1}, {1, 2}, {1, 2, 3}, {2}, {2, 3}, {3}
     }
 
     public static int maxSum(int[] arr) {
@@ -26,8 +25,6 @@ public class MaxSubArrSum {
             maxEnding = Math.max(arr[i], arr[i] + maxEnding);
             res = Math.max(res, maxEnding);
         }
-
         return res;
     }
-
 }

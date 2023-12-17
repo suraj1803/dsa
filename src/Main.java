@@ -1,20 +1,24 @@
 import patterns.PatternQ;
-
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {3, 1, 4, 2};
-//        Arrays.sort(arr);
-        int[] arr1 = Arrays.copyOf(arr, 5);
-        System.out.println(Arrays.toString(arr1));
-    }
+        int[][] arr = new int[3][3];
+        Scanner scanner = new Scanner(System.in);
 
-    public static boolean checkSorted(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < arr[i - 1])
-                return false;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+                arr[i][j] = scanner.nextInt();
         }
-        return true;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+                System.out.print(arr[i][j] + " ");
+
+            System.out.println();
+        }
     }
 }
