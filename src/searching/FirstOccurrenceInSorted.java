@@ -15,21 +15,22 @@ public class FirstOccurrenceInSorted {
     }
 
     public static int firstOccurrenceBin(int[] arr, int x, int low, int high) {
-        if (low > high)
-            return -1;
-
-        int mid = (low + high) / 2;
-
-        if (arr[mid] == x) {
-            if (mid != 0 && arr[mid - 1] == arr[mid]) {
-                return firstOccurrenceBin(arr, x, low, mid - 1);
-            } else {
-                return mid;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == x) {
+                if (mid != 0 && arr[mid - 1] == x) {
+                    high = mid - 1;
+                } else {
+                    return mid;
+                }
             }
-        } else if (arr[mid] > x) {
-            return firstOccurrenceBin(arr, x, low, mid - 1);
-        } else {
-            return firstOccurrenceBin(arr, x, low + 1, high);
+            else if (arr[mid] > x) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
         }
+        return -1;
     }
 }
