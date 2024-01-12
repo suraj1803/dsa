@@ -2,7 +2,7 @@ package searching;
 
 public class FirstOccurrenceInSorted {
     public static void main(String[] args) {
-        System.out.println(firstOccurrenceBin(new int[]{1, 2, 3, 4, 4, 5}, 4, 0, 5));
+
     }
 
     public static int firstOccurrence(int[] arr, int x) {
