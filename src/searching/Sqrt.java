@@ -2,7 +2,7 @@ package searching;
 
 public class Sqrt {
     public static void main(String[] args) {
-        System.out.println(sqrt(5));
+        System.out.println();
     }
 
     public static int sqrt(int n) {
